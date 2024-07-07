@@ -1,12 +1,87 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\zaris\\OneDrive\\Personal Zarish\\Sait files\\Semester 2\\OOP 2\\Mauvi\\Assignment2\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2A4A2362-6B88-48F1-8BAA-301C2A17C1E4}|Assignment2\\Assignment2.csproj|c:\\users\\zaris\\desktop\\oop ass2\\assignment2\\assignment2\\components\\pages\\flights.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A4A2362-6B88-48F1-8BAA-301C2A17C1E4}|Assignment2\\Assignment2.csproj|solutionrelative:assignment2\\components\\pages\\flights.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A4A2362-6B88-48F1-8BAA-301C2A17C1E4}|Assignment2\\Assignment2.csproj|c:\\users\\zaris\\desktop\\oop ass2\\assignment2\\assignment2\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A4A2362-6B88-48F1-8BAA-301C2A17C1E4}|Assignment2\\Assignment2.csproj|solutionrelative:assignment2\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A4A2362-6B88-48F1-8BAA-301C2A17C1E4}|Assignment2\\Assignment2.csproj|c:\\users\\zaris\\desktop\\oop ass2\\assignment2\\assignment2\\components\\pages\\reservations.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A4A2362-6B88-48F1-8BAA-301C2A17C1E4}|Assignment2\\Assignment2.csproj|solutionrelative:assignment2\\components\\pages\\reservations.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A4A2362-6B88-48F1-8BAA-301C2A17C1E4}|Assignment2\\Assignment2.csproj|c:\\users\\zaris\\desktop\\oop ass2\\assignment2\\assignment2\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A4A2362-6B88-48F1-8BAA-301C2A17C1E4}|Assignment2\\Assignment2.csproj|solutionrelative:assignment2\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Reservations.razor",
+              "DocumentMoniker": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\Components\\Pages\\Reservations.razor",
+              "RelativeDocumentMoniker": "Assignment2\\Components\\Pages\\Reservations.razor",
+              "ToolTip": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\Components\\Pages\\Reservations.razor",
+              "RelativeToolTip": "Assignment2\\Components\\Pages\\Reservations.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-07T05:14:59.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Assignment2\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "Assignment2\\Components\\Pages\\Home.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-07T05:14:58.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Flights.razor",
+              "DocumentMoniker": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\Components\\Pages\\Flights.razor",
+              "RelativeDocumentMoniker": "Assignment2\\Components\\Pages\\Flights.razor",
+              "ToolTip": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\Components\\Pages\\Flights.razor",
+              "RelativeToolTip": "Assignment2\\Components\\Pages\\Flights.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-07T05:14:57.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Assignment2\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "Assignment2\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAABgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-07T05:06:32.57Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

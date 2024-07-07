@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FgO+5Y7aUbrwhcXYzqHMH+OsUIRL5fNctCR/Ip3++C4=",
+  "Hash": "K7ZE3jhZwmHdsOxZP/9c5Zn3qUY9ofVz/4cnICFfZ+k=",
   "Source": "Assignment2",
   "BasePath": "/",
   "Mode": "Root",
@@ -10,17 +10,17 @@
     {
       "Name": "Assignment2\\wwwroot",
       "Source": "Assignment2",
-      "ContentRoot": "C:\\Users\\zaris\\OneDrive\\Personal Zarish\\Sait files\\Semester 2\\OOP 2\\Mauvi\\Assignment2\\Assignment2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\wwwroot\\",
       "BasePath": "/",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\zaris\\OneDrive\\Personal Zarish\\Sait files\\Semester 2\\OOP 2\\Mauvi\\Assignment2\\Assignment2\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\Assignment2.styles.css",
+      "Identity": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\Assignment2.styles.css",
       "SourceId": "Assignment2",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\zaris\\OneDrive\\Personal Zarish\\Sait files\\Semester 2\\OOP 2\\Mauvi\\Assignment2\\Assignment2\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\",
       "BasePath": "/",
       "RelativePath": "Assignment2.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\zaris\\OneDrive\\Personal Zarish\\Sait files\\Semester 2\\OOP 2\\Mauvi\\Assignment2\\Assignment2\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\Assignment2.styles.css"
+      "OriginalItemSpec": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\Assignment2.styles.css"
     },
     {
-      "Identity": "C:\\Users\\zaris\\OneDrive\\Personal Zarish\\Sait files\\Semester 2\\OOP 2\\Mauvi\\Assignment2\\Assignment2\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\Assignment2.bundle.scp.css",
+      "Identity": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\Assignment2.bundle.scp.css",
       "SourceId": "Assignment2",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\zaris\\OneDrive\\Personal Zarish\\Sait files\\Semester 2\\OOP 2\\Mauvi\\Assignment2\\Assignment2\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\",
       "BasePath": "/",
       "RelativePath": "Assignment2.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\zaris\\OneDrive\\Personal Zarish\\Sait files\\Semester 2\\OOP 2\\Mauvi\\Assignment2\\Assignment2\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\Assignment2.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\Assignment2.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\zaris\\OneDrive\\Personal Zarish\\Sait files\\Semester 2\\OOP 2\\Mauvi\\Assignment2\\Assignment2\\wwwroot\\css\\app.css",
+      "Identity": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\wwwroot\\css\\app.css",
       "SourceId": "Assignment2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\zaris\\OneDrive\\Personal Zarish\\Sait files\\Semester 2\\OOP 2\\Mauvi\\Assignment2\\Assignment2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\css\\app.css"
     },
     {
-      "Identity": "C:\\Users\\zaris\\OneDrive\\Personal Zarish\\Sait files\\Semester 2\\OOP 2\\Mauvi\\Assignment2\\Assignment2\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "Assignment2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\zaris\\OneDrive\\Personal Zarish\\Sait files\\Semester 2\\OOP 2\\Mauvi\\Assignment2\\Assignment2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\zaris\\OneDrive\\Personal Zarish\\Sait files\\Semester 2\\OOP 2\\Mauvi\\Assignment2\\Assignment2\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "Assignment2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\zaris\\OneDrive\\Personal Zarish\\Sait files\\Semester 2\\OOP 2\\Mauvi\\Assignment2\\Assignment2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\zaris\\OneDrive\\Personal Zarish\\Sait files\\Semester 2\\OOP 2\\Mauvi\\Assignment2\\Assignment2\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\wwwroot\\favicon.png",
       "SourceId": "Assignment2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\zaris\\OneDrive\\Personal Zarish\\Sait files\\Semester 2\\OOP 2\\Mauvi\\Assignment2\\Assignment2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "C:\\Users\\zaris\\OneDrive\\Personal Zarish\\Sait files\\Semester 2\\OOP 2\\Mauvi\\Assignment2\\Assignment2\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\wwwroot\\index.html",
       "SourceId": "Assignment2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\zaris\\OneDrive\\Personal Zarish\\Sait files\\Semester 2\\OOP 2\\Mauvi\\Assignment2\\Assignment2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\zaris\\Desktop\\OOP Ass2\\Assignment2\\Assignment2\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "index.html",
       "AssetKind": "All",
