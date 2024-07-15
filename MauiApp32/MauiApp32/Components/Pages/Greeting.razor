@@ -1,0 +1,31 @@
+﻿@page "/Greeting"
+
+<h3>Greeting</h3>
+<p> hello how are you</p>
+<input @bind="Name" placeholder="Enter your name"/>
+
+<input type="datetime-local" @bind="selectedDate" />
+<select @bind="selectedValue" @bind:event="onchange">
+    @foreach (var option in options)
+    {
+        <option value="@option">@option</option>
+    }
+</select>
+<p>Selected Value: @selectedValue</p>
+
+
+
+@code {
+    public string Name { get; set; } = "MAUI blazor ";
+    
+    private DateTime selectedDate = DateTime.Now;
+    private string selectedValue;
+    private string selectedOption = "Option1";
+    private List<string> options = new List<string> { "Option 1", "Option 2", "Option 3" };
+
+    private void OnSelectedValueChanged(ChangeEventArgs e)
+    {
+        selectedValue = e.Value.ToString();
+    }
+    
+    }

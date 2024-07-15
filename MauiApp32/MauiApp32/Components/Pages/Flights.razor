@@ -1,0 +1,213 @@
+﻿@page "/flights"
+@using MauiApp32
+@using System.IO;
+@using System.Globalization;
+@using System.Diagnostics;
+
+<h3>Flight Finder</h3>
+<div>
+    <label>From: </label>
+    <input @bind="From" type="text" placeholder="Any" />
+    <label>To: </label>
+    <input @bind="To" type="text" placeholder="Any" />
+    <label>Day: </label>
+    <input @bind="Day" type="text" placeholder="Any" />
+    <button @onclick="FindFlights">Find flights</button>
+</div>
+
+<h3>Flights</h3>
+@if (flights == null)
+{
+    <p>Loading...</p>
+}
+else if (flights.Count == 0)
+{
+    <p>No flights found.</p>
+}
+else
+{
+    <ul>
+        @foreach (var flight in flights)
+        {
+            <li>
+                @flight.FlightCode - @flight.Airline - @flight.DepartureAirport to @flight.DestinationAirport on @flight.Day at @flight.Time for $@flight.Cost
+                <button @onclick="() => PopulateReservationForm(flight)">Reserve</button>
+            </li>
+        }
+    </ul>
+}
+
+<h3>Reserve</h3>
+<div>
+    <label>Flight code: </label><input @bind="ReservationFlightCode" type="text" placeholder="Flight" readonly />
+    <label>Airline: </label><input @bind="ReservationAirline" type="text" placeholder="Airline" readonly />
+    <label>Day: </label><input @bind="ReservationDay" type="text" placeholder="Day" readonly />
+    <label>Time: </label><input @bind="ReservationTime" type="text" placeholder="Time" readonly />
+    <label>Cost: </label><input @bind="ReservationCost" type="text" readonly />
+    <label>Name: </label><input @bind="ReservationName" type="text" placeholder="Name" />
+    <label>Citizenship: </label><input @bind="ReservationCitizenship" type="text" placeholder="Citizenship" />
+    <button @onclick="MakeReservation">Reserve</button>
+</div>
+
+<p>Reservation Code: @ReservationCode</p>
+
+@code {
+    private string From { get; set; }
+    private string To { get; set; }
+    private string Day { get; set; }
+    private List<Flight> flights;
+    private string ReservationFlightCode { get; set; }
+    private string ReservationAirline { get; set; }
+    private string ReservationDay { get; set; }
+    private string ReservationTime { get; set; }
+    private decimal ReservationCost { get; set; }
+    private string ReservationName { get; set; }
+    private string ReservationCitizenship { get; set; }
+    private string ReservationCode { get; set; }
+
+    private List<Flight> FlightObjList = new List<Flight>();
+    private List<Airport> AirportObjList = new List<Airport>();
+
+    protected override void OnInitialized()
+    {
+        ReadFlightsFromCsv();
+        ReadAirportsFromCsv();
+    }
+
+    private void ReadFlightsFromCsv()
+    {
+        var filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "wwwroot", "flights.csv");
+        Debug.WriteLine($"Attempting to read flights from: {filePath}");
+
+        try
+        {
+            if (File.Exists(filePath))
+            {
+                using (var reader = new StreamReader(filePath))
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        string[] parts = line.Split(',');
+                        if (parts.Length >= 8)
+                        {
+                            var flight = new Flight
+                                {
+                                    FlightCode = parts[0].Trim(),
+                                    Airline = parts[1].Trim(),
+                                    DepartureAirport = parts[2].Trim(),
+                                    DestinationAirport = parts[3].Trim(),
+                                    Day = parts[4].Trim(),
+                                    Time = parts[5].Trim(),
+                                    Cost = decimal.Parse(parts[6].Trim(), CultureInfo.InvariantCulture),
+                                    Distance = decimal.Parse(parts[7].Trim(), CultureInfo.InvariantCulture)
+                                };
+                            FlightObjList.Add(flight);
+                        }
+                        else
+                        {
+                            Debug.WriteLine($"Skipping line: {line}. Not enough fields.");
+                        }
+                    }
+                }
+                Debug.WriteLine($"Loaded {FlightObjList.Count} flights from {filePath}");
+            }
+            else
+            {
+                Debug.WriteLine($"flights.csv file not found at {filePath}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Error reading flights.csv: {ex.Message}");
+        }
+    }
+
+    private void ReadAirportsFromCsv()
+    {
+        var filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "wwwroot", "airports.csv");
+        Debug.WriteLine($"Attempting to read airports from: {filePath}");
+
+        try
+        {
+            if (File.Exists(filePath))
+            {
+                using (var reader = new StreamReader(filePath))
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        string[] parts = line.Split(',');
+                        if (parts.Length >= 2)
+                        {
+                            var airport = new Airport
+                                {
+                                    Code = parts[0].Trim(),
+                                    Name = parts[1].Trim()
+                                };
+                            AirportObjList.Add(airport);
+                        }
+                        else
+                        {
+                            Debug.WriteLine($"Skipping line: {line}. Not enough fields.");
+                        }
+                    }
+                }
+                Debug.WriteLine($"Loaded {AirportObjList.Count} airports from {filePath}");
+            }
+            else
+            {
+                Debug.WriteLine($"airports.csv file not found at {filePath}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Error reading airports.csv: {ex.Message}");
+        }
+    }
+
+    private void FindFlights()
+    {
+        flights = FlightObjList
+            .Where(f => f.DepartureAirport.Equals(From, StringComparison.OrdinalIgnoreCase)
+                     && f.DestinationAirport.Equals(To, StringComparison.OrdinalIgnoreCase)
+                     && f.Day.Equals(Day, StringComparison.OrdinalIgnoreCase))
+            .ToList();
+
+        Debug.WriteLine($"FindFlights called with From: {From}, To: {To}, Day: {Day}");
+        Debug.WriteLine($"Flights found: {flights.Count}");
+    }
+
+    private void MakeReservation()
+    {
+        var reservation = new Reservation(
+            ReservationFlightCode,
+            ReservationAirline,
+            ReservationDay,
+            ReservationTime,
+            ReservationCost,
+            ReservationName,
+            ReservationCitizenship,
+            GenerateReservationCode()
+        );
+
+        ReservationCode = reservation.ReservationID.ToString();
+        // Save reservation to a list or database here
+    }
+
+    private int GenerateReservationCode()
+    {
+        var random = new Random();
+        return random.Next(1000, 9999);
+    }
+
+    private void PopulateReservationForm(Flight selectedFlight)
+    {
+        ReservationFlightCode = selectedFlight.FlightCode;
+        ReservationAirline = selectedFlight.Airline;
+        ReservationDay = selectedFlight.Day;
+        ReservationTime = selectedFlight.Time;
+        ReservationCost = selectedFlight.Cost;
+    }
+}
+
