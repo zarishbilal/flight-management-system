@@ -1,4 +1,209 @@
 ﻿@page "/reservations"
+@using MauiApp32
+@using Microsoft.VisualBasic.FileIO
+@using System.Collections.Generic
+@using System.IO
+@using System.Linq
+
+<h3>Reservation Finder</h3>
+<div>
+    <label>Reservation Code: </label>
+    <input @bind="SearchReservationCode" type="text" placeholder="Any" />
+    <label>Airline: </label>
+    <input @bind="SearchAirline" type="text" placeholder="Any" />
+    <label>Name: </label>
+    <input @bind="SearchName" type="text" placeholder="Any" />
+    <button @onclick="FindReservations">Find Reservations</button>
+</div>
 
 <h3>Reservations</h3>
-<p>Manage your reservations here.</p>
+@if (reservations == null)
+{
+    <p>Loading...</p>
+}
+else if (reservations.Count == 0)
+{
+    <p>No reservations found.</p>
+}
+else
+{
+    <ul>
+        @foreach (var reservation in reservations)
+        {
+            <li>
+                Reservation Code: @reservation.ReservationID - Airline: @reservation.Airline - Cost: $@reservation.Cost - Name: @reservation.Name - Citizenship: @reservation.Citizenship - Status: @reservation.Status
+            </li>
+        }
+    </ul>
+}
+
+<h3>Reserve</h3>
+<div>
+    <label>Reservation Code: </label><input @bind="NewReservationCode" type="text" placeholder="Reservation Code" readonly />
+    <label>Flight Code: </label><input @bind="NewReservationFlightCode" type="text" placeholder="Flight Code" readonly />
+    <label>Airline: </label><input @bind="NewReservationAirline" type="text" placeholder="Airline" readonly />
+    <label>Cost: </label><input @bind="NewReservationCost" type="number" step="0.01" placeholder="Cost" readonly />
+    <label>Name: </label><input @bind="NewReservationName" type="text" placeholder="Name" />
+    <label>Citizenship: </label><input @bind="NewReservationCitizenship" type="text" placeholder="Citizenship" />
+    <label>Status: </label>
+    <select @bind="NewReservationStatus">
+        <option value="True">True</option>
+        <option value="False">False</option>
+    </select>
+    <button @onclick="UpdateReservation" style="background-color:green;color:white;">Update</button>
+</div>
+
+@code {
+    private string SearchReservationCode { get; set; }
+    private string SearchAirline { get; set; }
+    private string SearchName { get; set; }
+    private List<Reservation> reservations;
+    private List<Reservation> allReservations; // to hold all reservations from CSV
+
+    private string NewReservationCode { get; set; }
+    private string NewReservationFlightCode { get; set; }
+    private string NewReservationAirline { get; set; }
+    private decimal NewReservationCost { get; set; }
+    private string NewReservationName { get; set; }
+    private string NewReservationCitizenship { get; set; }
+    private string NewReservationStatus { get; set; } = "False"; // Default value
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadReservationsAsync(); // Load reservations initially
+    }
+
+    private async Task LoadReservationsAsync()
+    {
+        string csvFilePath = @"C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\wwwroot\\reservationoutput.csv";
+
+        using (TextFieldParser parser = new TextFieldParser(csvFilePath))
+        {
+            parser.TextFieldType = FieldType.Delimited;
+            parser.SetDelimiters(",");
+
+            allReservations = new List<Reservation>();
+
+            while (!parser.EndOfData)
+            {
+                string[] fields = parser.ReadFields();
+                if (fields.Length >= 9) // Adjusted length to match all fields
+                {
+                    string flightNumber = fields[0];
+                    string airline = fields[1];
+                    string day = fields[2];
+                    string time = fields[3];
+                    string costStr = fields[4];
+                    decimal.TryParse(costStr, out decimal cost);
+                    string name = fields[5];
+                    string citizenship = fields[6];
+                    int.TryParse(fields[7], out int reservationID);
+                    bool.TryParse(fields[8], out bool status);
+
+                    Reservation reservation = new Reservation(flightNumber, airline, day, time, cost, name, citizenship, reservationID)
+                    {
+                        Status = status
+                    };
+
+                    allReservations.Add(reservation);
+                }
+            }
+        }
+    }
+
+    private void FindReservations()
+    {
+        IEnumerable<Reservation> filteredReservations = allReservations;
+
+        if (!string.IsNullOrEmpty(SearchReservationCode))
+        {
+            if (int.TryParse(SearchReservationCode, out int searchReservationID))
+            {
+                filteredReservations = filteredReservations.Where(r => r.ReservationID == searchReservationID);
+            }
+        }
+
+        if (!string.IsNullOrEmpty(SearchAirline))
+        {
+            filteredReservations = filteredReservations.Where(r => r.Airline.Contains(SearchAirline, StringComparison.OrdinalIgnoreCase));
+        }
+
+        if (!string.IsNullOrEmpty(SearchName))
+        {
+            filteredReservations = filteredReservations.Where(r => r.Name.Contains(SearchName, StringComparison.OrdinalIgnoreCase));
+        }
+
+        reservations = filteredReservations.ToList();
+
+        if (reservations.Count == 1)
+        {
+            PopulateReservationFields(reservations.First());
+        }
+    }
+
+    private void PopulateReservationFields(Reservation reservation)
+    {
+        NewReservationCode = reservation.ReservationID.ToString();
+        NewReservationFlightCode = reservation.FlightNumber;
+        NewReservationAirline = reservation.Airline;
+        NewReservationCost = reservation.Cost;
+        NewReservationName = reservation.Name;
+        NewReservationCitizenship = reservation.Citizenship;
+        NewReservationStatus = reservation.Status.ToString();
+    }
+
+    private async void UpdateReservation()
+    {
+        // Find the reservation to update in allReservations
+        if (int.TryParse(NewReservationCode, out int reservationID))
+        {
+            var reservationToUpdate = allReservations.FirstOrDefault(r => r.ReservationID == reservationID);
+            if (reservationToUpdate != null)
+            {
+                // Attempt to update fields with error handling
+                try
+                {
+                    reservationToUpdate.Name = NewReservationName;
+                    reservationToUpdate.Citizenship = NewReservationCitizenship;
+                    reservationToUpdate.Status = bool.Parse(NewReservationStatus);
+
+                    // Save changes to CSV
+                    await SaveReservationsToCsv();
+
+                    // Optionally, display a success message (not clearing fields)
+                    Console.WriteLine("Reservation updated successfully.");
+                }
+                catch (Exception ex)
+                {
+                    // Display error message (e.g., toast notification or modal)
+                    Console.WriteLine($"Error updating reservation: {ex.Message}");
+                    // Optionally, rollback changes or handle accordingly
+                }
+            }
+            else
+            {
+                // Handle case where reservation is not found
+                Console.WriteLine($"Reservation with ID {reservationID} not found.");
+            }
+        }
+        else
+        {
+            // Handle invalid reservation ID scenario
+            Console.WriteLine($"Invalid Reservation ID: {NewReservationCode}");
+        }
+    }
+
+    private async Task SaveReservationsToCsv()
+    {
+        string csvFilePath = @"C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\wwwroot\\reservationoutput.csv";
+
+        using (StreamWriter writer = new StreamWriter(csvFilePath, false))
+        {
+            foreach (var reservation in allReservations)
+            {
+                string line = $"{reservation.FlightNumber},{reservation.Airline},{reservation.Day},{reservation.Time},{reservation.Cost},{reservation.Name},{reservation.Citizenship},{reservation.ReservationID},{reservation.Status}";
+                await writer.WriteLineAsync(line);
+            }
+        }
+    }
+}

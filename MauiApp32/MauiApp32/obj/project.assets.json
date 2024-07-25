@@ -56228,11 +56228,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zaris\\Downloads\\MauiApp32 (1)\\MauiApp32\\MauiApp32\\MauiApp32\\MauiApp32.csproj",
+      "projectUniqueName": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\MauiApp32.csproj",
       "projectName": "MauiApp32",
-      "projectPath": "C:\\Users\\zaris\\Downloads\\MauiApp32 (1)\\MauiApp32\\MauiApp32\\MauiApp32\\MauiApp32.csproj",
+      "projectPath": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\MauiApp32.csproj",
       "packagesPath": "C:\\Users\\zaris\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zaris\\Downloads\\MauiApp32 (1)\\MauiApp32\\MauiApp32\\MauiApp32\\obj\\",
+      "outputPath": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [

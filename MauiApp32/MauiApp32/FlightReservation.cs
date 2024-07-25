@@ -18,6 +18,7 @@ namespace MauiApp32
         public string Name { get; set; }
         public string Citizenship { get; set; }
         public int ReservationID { get; set; }
+        public bool Status {get; set; }
 
         public Reservation(string flightNumber, string airline, string day, string time, decimal cost, string name, string citizenship, int reservationID)
         {
@@ -29,6 +30,7 @@ namespace MauiApp32
             Name = name;
             Citizenship = citizenship;
             ReservationID = reservationID;
+
         }
     }
 }

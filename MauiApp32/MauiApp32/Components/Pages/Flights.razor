@@ -3,15 +3,35 @@
 @using System.IO;
 @using System.Globalization;
 @using System.Diagnostics;
+@using CsvHelper;
+@using CsvHelper.Configuration;
 
 <h3>Flight Finder</h3>
 <div>
     <label>From: </label>
-    <input @bind="From" type="text" placeholder="Any" />
+    <select @bind="From" class="form-control">
+        <option value="">Any</option>
+        @foreach (var airport in AirportObjList)
+        {
+            <option value="@airport.Code">@airport.Name</option>
+        }
+    </select>
     <label>To: </label>
-    <input @bind="To" type="text" placeholder="Any" />
+    <select @bind="To" class="form-control">
+        <option value="">Any</option>
+        @foreach (var airport in AirportObjList)
+        {
+            <option value="@airport.Code">@airport.Name</option>
+        }
+    </select>
     <label>Day: </label>
-    <input @bind="Day" type="text" placeholder="Any" />
+    <select @bind="Day" class="form-control">
+        <option value="">Any</option>
+        @foreach (var day in DaysOfWeek)
+        {
+            <option value="@day">@day</option>
+        }
+    </select>
     <button @onclick="FindFlights">Find flights</button>
 </div>
 
@@ -29,9 +49,13 @@ else
     <ul>
         @foreach (var flight in flights)
         {
-            <li>
-                @flight.FlightCode - @flight.Airline - @flight.DepartureAirport to @flight.DestinationAirport on @flight.Day at @flight.Time for $@flight.Cost
-                <button @onclick="() => PopulateReservationForm(flight)">Reserve</button>
+            <li class="flight-item">
+                <div class="flight-details">
+                    @flight.FlightCode - @flight.Airline - @flight.DepartureAirport to @flight.DestinationAirport on @flight.Day at @flight.Time for $@flight.Cost
+                </div>
+                <div class="reserve-button">
+                    <button @onclick="() => PopulateReservationForm(flight)">Reserve</button>
+                </div>
             </li>
         }
     </ul>
@@ -47,9 +71,30 @@ else
     <label>Name: </label><input @bind="ReservationName" type="text" placeholder="Name" />
     <label>Citizenship: </label><input @bind="ReservationCitizenship" type="text" placeholder="Citizenship" />
     <button @onclick="MakeReservation">Reserve</button>
+    @if (!string.IsNullOrEmpty(ErrorMessage))
+    {
+        <p style="color: red; font-weight: bold;">@ErrorMessage</p>
+    }
 </div>
 
 <p>Reservation Code: @ReservationCode</p>
+
+<h3>Reservations</h3>
+@if (ReservationsOutput == null || ReservationsOutput.Count == 0)
+{
+    <p>No reservations found.</p>
+}
+else
+{
+    <ul>
+        @foreach (var reservation in ReservationsOutput)
+        {
+            <li>
+                @reservation.ReservationID - @reservation.FlightNumber - @reservation.Airline - $@reservation.Cost - @reservation.Name - @reservation.Citizenship - Status: @reservation.Status
+            </li>
+        }
+    </ul>
+}
 
 @code {
     private string From { get; set; }
@@ -64,14 +109,19 @@ else
     private string ReservationName { get; set; }
     private string ReservationCitizenship { get; set; }
     private string ReservationCode { get; set; }
+    private string ErrorMessage { get; set; }
+    private List<Reservation> ReservationsOutput { get; set; } = new List<Reservation>();
 
     private List<Flight> FlightObjList = new List<Flight>();
     private List<Airport> AirportObjList = new List<Airport>();
+
+    private List<string> DaysOfWeek = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
 
     protected override void OnInitialized()
     {
         ReadFlightsFromCsv();
         ReadAirportsFromCsv();
+        LoadReservationsFromCsv();
     }
 
     private void ReadFlightsFromCsv()
@@ -166,12 +216,39 @@ else
         }
     }
 
+    private void LoadReservationsFromCsv()
+    {
+        var filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "wwwroot", "reservationoutput.csv");
+
+        try
+        {
+            if (File.Exists(filePath))
+            {
+                using (var reader = new StreamReader(filePath))
+                {
+                    var config = new CsvConfiguration(CultureInfo.InvariantCulture)
+                        {
+                            HasHeaderRecord = true,
+                        };
+                    using (var csv = new CsvReader(reader, config))
+                    {
+                        ReservationsOutput = csv.GetRecords<Reservation>().ToList();
+                    }
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Error loading reservations from CSV: {ex.Message}");
+        }
+    }
+
     private void FindFlights()
     {
         flights = FlightObjList
-            .Where(f => f.DepartureAirport.Equals(From, StringComparison.OrdinalIgnoreCase)
-                     && f.DestinationAirport.Equals(To, StringComparison.OrdinalIgnoreCase)
-                     && f.Day.Equals(Day, StringComparison.OrdinalIgnoreCase))
+            .Where(f => (string.IsNullOrEmpty(From) || f.DepartureAirport.Equals(From, StringComparison.OrdinalIgnoreCase))
+                     && (string.IsNullOrEmpty(To) || f.DestinationAirport.Equals(To, StringComparison.OrdinalIgnoreCase))
+                     && (string.IsNullOrEmpty(Day) || f.Day.Equals(Day, StringComparison.OrdinalIgnoreCase)))
             .ToList();
 
         Debug.WriteLine($"FindFlights called with From: {From}, To: {To}, Day: {Day}");
@@ -180,19 +257,44 @@ else
 
     private void MakeReservation()
     {
-        var reservation = new Reservation(
-            ReservationFlightCode,
-            ReservationAirline,
-            ReservationDay,
-            ReservationTime,
-            ReservationCost,
-            ReservationName,
-            ReservationCitizenship,
-            GenerateReservationCode()
-        );
+        try
+        {
+            if (string.IsNullOrEmpty(ReservationName) || string.IsNullOrEmpty(ReservationCitizenship))
+            {
+                throw new InvalidOperationException("Name and Citizenship cannot be empty.");
+            }
 
-        ReservationCode = reservation.ReservationID.ToString();
-        // Save reservation to a list or database here
+            var reservation = new Reservation(
+                ReservationFlightCode,
+                ReservationAirline,
+                ReservationDay,
+                ReservationTime,
+                ReservationCost,
+                ReservationName,
+                ReservationCitizenship,
+                GenerateReservationCode()
+
+            );
+
+            ReservationCode = reservation.ReservationID.ToString();
+            ErrorMessage = ""; // Clear any previous error messages
+
+            // Save reservation to the CSV file
+            SaveReservationToCsv(reservation);
+
+            // Add reservation to the list to display
+            ReservationsOutput.Add(reservation);
+        }
+        catch (InvalidOperationException ex)
+        {
+            ErrorMessage = $"Invalid operation: {ex.Message}";
+            // Optionally, handle the exception (e.g., show an error message to the user)
+        }
+        catch (Exception ex)
+        {
+            ErrorMessage = $"Error making reservation: {ex.Message}";
+            // Handle other exceptions as needed
+        }
     }
 
     private int GenerateReservationCode()
@@ -209,5 +311,41 @@ else
         ReservationTime = selectedFlight.Time;
         ReservationCost = selectedFlight.Cost;
     }
+
+    private void SaveReservationToCsv(Reservation reservation)
+    {
+        var filePath = "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\wwwroot\\reservationoutput.csv";
+
+        try
+        {
+            using (var writer = new StreamWriter(filePath, true))
+            {
+                var config = new CsvConfiguration(CultureInfo.InvariantCulture)
+                    {
+                        HasHeaderRecord = !File.Exists(filePath) || new FileInfo(filePath).Length == 0,
+                    };
+                using (var csv = new CsvWriter(writer, config))
+                {
+                    csv.WriteRecord(reservation);
+                    csv.NextRecord();
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Error saving reservation to CSV: {ex.Message}");
+        }
+    }
 }
 
+<style>
+    .flight-item {
+        border: 1px solid black;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .reserve-button {
+        margin-top: 5px;
+    }
+</style>

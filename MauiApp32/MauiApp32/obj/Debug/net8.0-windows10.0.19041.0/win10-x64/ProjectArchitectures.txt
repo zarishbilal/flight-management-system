@@ -1,1 +1,1 @@
-C:\Users\zaris\Downloads\MauiApp32 (1)\MauiApp32\MauiApp32\MauiApp32\MauiApp32.csproj;x64
+C:\Users\zaris\Downloads\assignmentoop\assignmentoop\MauiApp32\MauiApp32\MauiApp32.csproj;x64

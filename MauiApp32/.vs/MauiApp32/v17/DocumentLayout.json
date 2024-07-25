@@ -1,30 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\zaris\\Downloads\\MauiApp32 (1)\\MauiApp32\\MauiApp32\\",
+  "WorkspaceRootPath": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|c:\\users\\zaris\\downloads\\mauiapp32 (1)\\mauiapp32\\mauiapp32\\mauiapp32\\components\\pages\\flights.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|c:\\users\\zaris\\downloads\\assignmentoop\\assignmentoop\\mauiapp32\\mauiapp32\\wwwroot\\reservationoutput.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|solutionrelative:mauiapp32\\wwwroot\\reservationoutput.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|c:\\users\\zaris\\downloads\\assignmentoop\\assignmentoop\\mauiapp32\\mauiapp32\\components\\pages\\flights.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|solutionrelative:mauiapp32\\components\\pages\\flights.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|c:\\users\\zaris\\downloads\\mauiapp32 (1)\\mauiapp32\\mauiapp32\\mauiapp32\\flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|solutionrelative:mauiapp32\\flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|c:\\users\\zaris\\downloads\\assignmentoop\\assignmentoop\\mauiapp32\\mauiapp32\\components\\pages\\reservations.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|solutionrelative:mauiapp32\\components\\pages\\reservations.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|c:\\users\\zaris\\downloads\\mauiapp32 (1)\\mauiapp32\\mauiapp32\\mauiapp32\\wwwroot\\flights.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|c:\\users\\zaris\\downloads\\assignmentoop\\assignmentoop\\mauiapp32\\mauiapp32\\wwwroot\\airports.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|solutionrelative:mauiapp32\\wwwroot\\airports.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|c:\\users\\zaris\\downloads\\assignmentoop\\assignmentoop\\mauiapp32\\mauiapp32\\wwwroot\\flights.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|solutionrelative:mauiapp32\\wwwroot\\flights.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|c:\\users\\zaris\\downloads\\mauiapp32 (1)\\mauiapp32\\mauiapp32\\mauiapp32\\flightreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|c:\\users\\zaris\\downloads\\assignmentoop\\assignmentoop\\mauiapp32\\mauiapp32\\flightreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|solutionrelative:mauiapp32\\flightreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|c:\\users\\zaris\\downloads\\mauiapp32 (1)\\mauiapp32\\mauiapp32\\mauiapp32\\airport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|c:\\users\\zaris\\downloads\\assignmentoop\\assignmentoop\\mauiapp32\\mauiapp32\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|solutionrelative:mauiapp32\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|c:\\users\\zaris\\downloads\\assignmentoop\\assignmentoop\\mauiapp32\\mauiapp32\\airport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|solutionrelative:mauiapp32\\airport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|c:\\users\\zaris\\downloads\\mauiapp32 (1)\\mauiapp32\\mauiapp32\\mauiapp32\\wwwroot\\airports.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|solutionrelative:mauiapp32\\wwwroot\\airports.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|c:\\users\\zaris\\downloads\\assignmentoop\\assignmentoop\\mauiapp32\\mauiapp32\\mauiapp32.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|solutionrelative:mauiapp32\\mauiapp32.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|c:\\users\\zaris\\downloads\\assignmentoop\\assignmentoop\\mauiapp32\\mauiapp32\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|solutionrelative:mauiapp32\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|c:\\users\\zaris\\downloads\\assignmentoop\\assignmentoop\\mauiapp32\\mauiapp32\\flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2204E6B-4718-4432-A248-FD49D4952E8F}|MauiApp32\\MauiApp32.csproj|solutionrelative:mauiapp32\\flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,80 +54,137 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "MauiApp32\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "MauiApp32\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-16T07:14:17.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "MauiApp32\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "MauiApp32\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-16T07:13:37.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MauiApp32",
+              "DocumentMoniker": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\MauiApp32.csproj",
+              "RelativeDocumentMoniker": "MauiApp32\\MauiApp32.csproj",
+              "ToolTip": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\MauiApp32.csproj",
+              "RelativeToolTip": "MauiApp32\\MauiApp32.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-07-16T07:13:31.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "reservationoutput.csv",
+              "DocumentMoniker": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\wwwroot\\reservationoutput.csv",
+              "RelativeDocumentMoniker": "MauiApp32\\wwwroot\\reservationoutput.csv",
+              "ToolTip": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\wwwroot\\reservationoutput.csv",
+              "RelativeToolTip": "MauiApp32\\wwwroot\\reservationoutput.csv",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
+              "WhenOpened": "2024-07-15T20:46:13.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Reservations.razor",
+              "DocumentMoniker": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\Components\\Pages\\Reservations.razor",
+              "RelativeDocumentMoniker": "MauiApp32\\Components\\Pages\\Reservations.razor",
+              "ToolTip": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\Components\\Pages\\Reservations.razor",
+              "RelativeToolTip": "MauiApp32\\Components\\Pages\\Reservations.razor",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAABYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-15T18:25:56.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Airport.cs",
-              "DocumentMoniker": "C:\\Users\\zaris\\Downloads\\MauiApp32 (1)\\MauiApp32\\MauiApp32\\MauiApp32\\Airport.cs",
+              "DocumentMoniker": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\Airport.cs",
               "RelativeDocumentMoniker": "MauiApp32\\Airport.cs",
-              "ToolTip": "C:\\Users\\zaris\\Downloads\\MauiApp32 (1)\\MauiApp32\\MauiApp32\\MauiApp32\\Airport.cs",
+              "ToolTip": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\Airport.cs",
               "RelativeToolTip": "MauiApp32\\Airport.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-14T22:59:31.263Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "FlightReservation.cs",
-              "DocumentMoniker": "C:\\Users\\zaris\\Downloads\\MauiApp32 (1)\\MauiApp32\\MauiApp32\\MauiApp32\\FlightReservation.cs",
+              "DocumentMoniker": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\FlightReservation.cs",
               "RelativeDocumentMoniker": "MauiApp32\\FlightReservation.cs",
-              "ToolTip": "C:\\Users\\zaris\\Downloads\\MauiApp32 (1)\\MauiApp32\\MauiApp32\\MauiApp32\\FlightReservation.cs",
+              "ToolTip": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\FlightReservation.cs",
               "RelativeToolTip": "MauiApp32\\FlightReservation.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAABAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-14T22:59:21.585Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "flights.csv",
-              "DocumentMoniker": "C:\\Users\\zaris\\Downloads\\MauiApp32 (1)\\MauiApp32\\MauiApp32\\MauiApp32\\wwwroot\\flights.csv",
+              "DocumentMoniker": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\wwwroot\\flights.csv",
               "RelativeDocumentMoniker": "MauiApp32\\wwwroot\\flights.csv",
-              "ToolTip": "C:\\Users\\zaris\\Downloads\\MauiApp32 (1)\\MauiApp32\\MauiApp32\\MauiApp32\\wwwroot\\flights.csv",
+              "ToolTip": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\wwwroot\\flights.csv",
               "RelativeToolTip": "MauiApp32\\wwwroot\\flights.csv",
-              "ViewState": "AQIAAC8BAAAAAAAAAAAAABkAAAApAAAA",
+              "ViewState": "AQIAABQBAAAAAAAAAAAAABkAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2024-07-14T22:59:05.868Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-14T22:59:05.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Flight.cs",
+              "DocumentMoniker": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\Flight.cs",
+              "RelativeDocumentMoniker": "MauiApp32\\Flight.cs",
+              "ToolTip": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\Flight.cs",
+              "RelativeToolTip": "MauiApp32\\Flight.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T22:58:50.242Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Flight.cs",
-              "DocumentMoniker": "C:\\Users\\zaris\\Downloads\\MauiApp32 (1)\\MauiApp32\\MauiApp32\\MauiApp32\\Flight.cs",
-              "RelativeDocumentMoniker": "MauiApp32\\Flight.cs",
-              "ToolTip": "C:\\Users\\zaris\\Downloads\\MauiApp32 (1)\\MauiApp32\\MauiApp32\\MauiApp32\\Flight.cs",
-              "RelativeToolTip": "MauiApp32\\Flight.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T22:58:50.242Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Flights.razor",
-              "DocumentMoniker": "C:\\Users\\zaris\\Downloads\\MauiApp32 (1)\\MauiApp32\\MauiApp32\\MauiApp32\\Components\\Pages\\Flights.razor",
+              "DocumentMoniker": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\Components\\Pages\\Flights.razor",
               "RelativeDocumentMoniker": "MauiApp32\\Components\\Pages\\Flights.razor",
-              "ToolTip": "C:\\Users\\zaris\\Downloads\\MauiApp32 (1)\\MauiApp32\\MauiApp32\\MauiApp32\\Components\\Pages\\Flights.razor",
+              "ToolTip": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\Components\\Pages\\Flights.razor",
               "RelativeToolTip": "MauiApp32\\Components\\Pages\\Flights.razor",
-              "ViewState": "AQIAAK4AAAAAAAAAAAAAAMEAAAA/AAAA",
+              "ViewState": "AQIAACUBAAAAAAAAAAAuwDwBAACIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-14T22:57:50.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-14T22:57:50.318Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "airports.csv",
-              "DocumentMoniker": "C:\\Users\\zaris\\Downloads\\MauiApp32 (1)\\MauiApp32\\MauiApp32\\MauiApp32\\wwwroot\\airports.csv",
+              "DocumentMoniker": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\wwwroot\\airports.csv",
               "RelativeDocumentMoniker": "MauiApp32\\wwwroot\\airports.csv",
-              "ToolTip": "C:\\Users\\zaris\\Downloads\\MauiApp32 (1)\\MauiApp32\\MauiApp32\\MauiApp32\\wwwroot\\airports.csv",
+              "ToolTip": "C:\\Users\\zaris\\Downloads\\assignmentoop\\assignmentoop\\MauiApp32\\MauiApp32\\wwwroot\\airports.csv",
               "RelativeToolTip": "MauiApp32\\wwwroot\\airports.csv",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA0AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
               "WhenOpened": "2024-07-14T22:57:33.129Z"
             }
